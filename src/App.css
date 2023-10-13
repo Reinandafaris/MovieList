@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+div {
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 50%;
+}
+
+.App-header {
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.Movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.Movie-wrapper {
+  flex: 0 1 calc(25% - 20px); /* 4 kolom di samping */
+  background-color: white;
+  color: black;
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+}
+
+.Movie-image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.Movie-image:hover {
+  transform: scale(1.1);
+}
+
+.Movie-title {
+  height: 50px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.Movie-search {
+  height: 18px;
+  font-size: 18px;
+  margin-bottom: 32px;
+  padding: 16px;
+  font-weight: bold;
+  width: 300px;
+}
+
+.Movie-caption {
+  text-align: left;
+  margin-bottom: 150px;
+}
+
+.img {
+  height: 100vh;
+  width: 100vw;
+}
+
+.Movie-judul {
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.Movie-deskripsi {
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+
+.Movie-btn {
+  padding-top: 20px;
+  color: white;
+  background-color: rgb(241, 1, 9);
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: solid 1px rgb(241, 1, 9);
+  margin-left: 50px;
+}
+
+.Movie-btn2 {
+  padding-top: 20px;
+  color: white;
+  background-color: rgb(241, 1, 9);
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: solid 1px rgb(241, 1, 9);
+}
+
+.Movie-more {
+  text-align: right;
+  margin-top: -40px;
+  color: rgb(241, 1, 9);
+  font-weight: bold;
+}
+
+.Movie-arrowRight {
+  color: rgb(241, 1, 9);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-control {
+  margin: 70px;
+  margin-top: 10px;
+  margin-left: -40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 100px;
+}
+
+input.form-control::placeholder {
+  color: white;
+}
+
+.Movie-login {
+  border: solid 3px rgb(241, 1, 9);
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  width: 110px;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.Movie-register {
+  color: white;
+  background-color: rgb(241, 1, 9);
+  padding: 10px;
+  width: 110px;
+  border-radius: 30px;
+  margin-right: 0px;
+  margin-top: 0px;
+  border: solid rgb(241, 1, 9);
+  font-weight: bold;
+}
+
+.Movie-detail {
+  color: white;
+  margin-top: 0px;
+  position: absolute;
+}
+
+.Movie-back {
+  border: solid 1px green;
+  color: white;
+  background-color: green;
+  padding: 10px;
+  width: 200px;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.card-text {
+  padding-right: 50%;
+}
+
+.Movie-detail-judul {
+  color: white;
+  z-index: 2;
+}
+
+.footer {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 0;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(241, 1, 9);
+}
+
+form .form-group {
+  background-color: white;
+  width: 30rem;
+  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.tag-register {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.wrapper-register {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.wrapper-register.active {
+  transform: scaleY(1);
+}
+
+.wrapper-login {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.wrapper-login.active {
+  transform: scaleY(1);
+}
+
+.isi-form {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  width: 23.5rem;
+}
+
+.form-icon {
+  color: black;
+}
+
+.line {
+  display: flex;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 5px 5px 5px 20px;
+  background: transparent;
+  width: 100%;
+  height: 2.5rem;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 20px;
+}
+
+.tombol-submit {
+  position: relative;
+  background-color: rgb(241, 1, 9);
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.baris-register {
+  padding-top: 10%;
+}
+
+.tag-group {
+  display: flex;
+}
+
+.cross {
+  cursor: pointer;
+  color: rgb(241, 1, 9);
+  margin-left: 12rem;
+  font-size: 20px;
+}
+
+.cross2 {
+  cursor: pointer;
+  color: rgb(241, 1, 9);
+  margin-left: 6rem;
+  font-size: 20px;
+}

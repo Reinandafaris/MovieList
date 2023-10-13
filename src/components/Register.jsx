@@ -1,50 +1,10 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-// import { Navigate } from 'react-router-dom';
 
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      let data = JSON.stringify({
-        name,
-        email,
-        password,
-      });
-
-      let config = {
-        method: 'post',
-        url: `${import.meta.env.VITE_API}/v1/auth/register`,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        data: data,
-      };
-
-      const response = await axios.request(config);
-      const { token } = response.data.data;
-
-      localStorage.setItem('token', token);
-
-      // Navigate('/');
-
-      // Temporary solution
-      // window.location.href = '/';
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        toast.error(error.response.data.message);
-        return;
-      }
-      toast.error(error.message);
-    }
-  };
 
   const handleCloseRegister = () => {
     const register = document.querySelector('.wrapper-register');
@@ -57,7 +17,7 @@ function Register() {
         <Container className="d-flex justify-content-center align-item-center">
           <Row className="baris-register">
             <Col>
-              <form onSubmit={onSubmit}>
+              <form>
                 <div className="form-group">
                   <div className="tag-group">
                     <h1 className="tag-register">Create Account</h1>
